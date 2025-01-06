@@ -41,7 +41,7 @@ def run():
         print(f"共{dic_moviesLen}部電影")
         for dic_movie in dic_movies:
             #分辨電影版本
-            hall_name = re.search(r'^\((.*?)\)(.*+)', dic_movie['strText'], re.DOTALL) 
+            hall_name = re.search(r'^\((.*?)\)(.*)', dic_movie['strText'], re.DOTALL) 
             #分辨電影名稱
             movie_name = hall_name.group(2) if hall_name and hall_name.group() else ""
             hallRow = hall.checkHall({
